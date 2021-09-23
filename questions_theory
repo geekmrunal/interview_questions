@@ -1,0 +1,18 @@
+How to find size of struct 
+
+struct xyz *ptr; 
+size = (char*)(ptr+1) - (char*)ptr;
+
+the logic here is when we have a pointer to the struct; ptr+1 will point to next memory location which is after sizeof struct 
+so ptr+1 - ptr will give the size of the struct. 
+
+another way is using sizeof function 
+struct xyz *ptr; 
+size = sizeof(struct xyz);
+
+
+what is difference between array and pointer. 
+array is aderived data structure which allocates contagious memory of fixed size of the same type of elements. 
+by definition of array int a[x] ; x bytes of contigious memory of type int  will be allocated 
+and a is the name of pointer to first element. 
+pointer is something we define as a variable which points to the address of any variable of type pointer type . 
